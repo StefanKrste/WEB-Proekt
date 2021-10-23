@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+section.nav {
+    background-color: #000000;
+    background-size: 100% 100%;
+    height: 60px;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body{
+    height: 100%;
+    background-color: #0e1212;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bezslika img{
+    margin-left: 3%;
+}
+
+.bezslika p{
+    margin-left: 5%;
+    color: #dbdbdb;
+    font-family: 'Press Start 2P', cursive;
+}
+.navMenu {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.navMenu a{
+    text-align: center;
+    color: #dbdbdb;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.navMenu a:hover {
+    color: #682ae9;
+}
+
+h1{
+    font-size: 200%;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 1%;
+    margin-top: 2%;
+    color: #dbdbdb;
+}
+
+.bezslika{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.slika {
+    width: 40%;
+    float: right;
+    height: 100%;
+    background: linear-gradient(260deg, #383737 20%,#0e1212 80%);
+}
+
+.slika img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Kontakti i:hover{
+    color: #682ae9;
+}
+
+.hobi{
+    margin-left: 4%;
+    font-family: 'Press Start 2P', cursive;
+    color: #dbdbdb;
+}
+
+.hobi aside{
+    font-size: 1em;
+    font-family: 'Ariel', cursive;
+}
+
+.hobi summary{
+    font-size: 1.4em;
+    color: #682ae9;
+}
+
+.hobi img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#blog p{
+    color: white;
+    font-family: 'Ariel', cursive;
+    margin-left: 4%;
+}
+
+#anketa p{
+    color: white;
+    font-family: 'Ariel', cursive;
+    margin-left: 4%;
+}
+
+.Kontakti img{
+    position: static;
+    algin: right;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Komentari{
+    color: white;
+    background-color: #1b002f;
+    font-family: 'Ariel', cursive;
+    margin-left: 4%;
+    width: 450px;
+    height: 100px;
+}
+
+.like:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}

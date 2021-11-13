@@ -23,16 +23,16 @@
 
     <section id="galerija">
         <h1 class="galerija"> Галерија</h1>
-        <table>
+        <table style="margin: 0 auto">
             <tr>
                 <td><img src="galerija/robot 1.png" height="400px" width="300px" alt="#"><br>
-                    <p style="color: white; font-family: 'Ariel', cursive;"><input type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like1">0</span></p>
+                    <p style="color: white; font-family: 'Ariel', cursive;"><input  onclick="Like(1)" type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like1">0</span></p>
                     <form method= "post" action="#">
-                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input class="input" type="text" placeholder="Име" required>
-                            Презиме:<input class="input" type="text"  placeholder="Презиме" required></p>
+                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input id="ime1" class="input" type="text" placeholder="Име" required>
+                            Презиме:<input id="prezime1" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
-                            <textarea placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input class="kopce" type="submit" value="Испрати">
+                            <textarea id="vlezNaKom1" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
+                            <input style="width: 55px" onclick="Komentiraj(1)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
@@ -42,13 +42,13 @@
                 <td style="width: 300px"></td>
 
                 <td><img src="galerija/robot 2.png" height="400px" width="400px" alt="#"><br>
-                    <p style="color: white; font-family: 'Ariel', cursive;"><input type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like2">0</span></p>
+                    <p style="color: white; font-family: 'Ariel', cursive;"><input onclick="Like(2)" type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like2">0</span></p>
                     <form method= "post" action="#">
-                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input class="input" type="text" placeholder="Име" required>
-                            Презиме:<input class="input" type="text"  placeholder="Презиме" required></p>
+                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input id="ime2" class="input" type="text" placeholder="Име" required>
+                            Презиме:<input id="prezime2" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
-                            <textarea placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input class="kopce" type="submit" value="Испрати">
+                            <textarea id="vlezNaKom2" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
+                            <input style="width: 55px" onclick="Komentiraj(2)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
@@ -58,13 +58,13 @@
 
             <tr>
                 <td><img src="galerija/robot 3.png" height="300px" width="400px" alt="#"><br>
-                    <p style="color: white; font-family: 'Ariel', cursive;"><input type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like3">0</span></p>
+                    <p style="color: white; font-family: 'Ariel', cursive;"><input onclick="Like(3)" type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like3">0</span></p>
                     <form method= "post" action="#">
-                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input class="input" type="text" placeholder="Име" required>
-                            Презиме:<input class="input" type="text"  placeholder="Презиме" required></p>
+                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input id="ime3" class="input" type="text" placeholder="Име" required>
+                            Презиме:<input id="prezime3" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
-                            <textarea placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input class="kopce" type="submit" value="Испрати">
+                            <textarea id="vlezNaKom3" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
+                            <input style="width: 55px" onclick="Komentiraj(3)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
@@ -74,13 +74,13 @@
                 <td style="width: 300px"></td>
 
                 <td><img src="galerija/robot 4.png" height="300px" width="300px" alt="#"><br>
-                    <p style="color: white; font-family: 'Ariel', cursive;"><input type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like4">0</span></p>
+                    <p style="color: white; font-family: 'Ariel', cursive;"><input onclick="Like(4)" type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like4">0</span></p>
                     <form method= "post" action="#">
-                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input class="input" type="text" placeholder="Име" required>
-                            Презиме:<input class="input" type="text"  placeholder="Презиме" required></p>
+                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input id="ime4" class="input" type="text" placeholder="Име" required>
+                            Презиме:<input id="prezime4" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
-                            <textarea placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input class="kopce" type="submit" value="Испрати">
+                            <textarea id="vlezNaKom4" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
+                            <input style="width: 55px" onclick="Komentiraj(4)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
@@ -89,13 +89,13 @@
             </tr>
             <tr>
                 <td><img src="galerija/robot 5.png" height="400px" width="400px" alt="#"><br>
-                    <p style="color: white; font-family: 'Ariel', cursive;"><input type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like5">0</span></p>
+                    <p style="color: white; font-family: 'Ariel', cursive;"><input onclick="Like(5)" type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like5">0</span></p>
                     <form method= "post" action="#">
-                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input class="input" type="text" placeholder="Име" required>
-                            Презиме:<input class="input" type="text"  placeholder="Презиме" required></p>
+                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input id="ime5" class="input" type="text" placeholder="Име" required>
+                            Презиме:<input id="prezime5" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
-                            <textarea placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input class="kopce" type="submit" value="Испрати">
+                            <textarea id="vlezNaKom5" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
+                            <input style="width: 55px" onclick="Komentiraj(5)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
@@ -105,13 +105,13 @@
                 <td style="width: 300px"></td>
 
                 <td><img src="galerija/robot 6.png" height="400px" width="300px" alt="#"><br>
-                    <p style="color: white; font-family: 'Ariel', cursive;"><input type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like6">0</span></p>
+                    <p style="color: white; font-family: 'Ariel', cursive;"><input onclick="Like(6)" type="image" name="sl1" class="like" src="galerija/like.png" height="30px" width="30px" alt="#">&nbsp&nbsp&nbspLikes:<span id="like6">0</span></p>
                     <form method= "post" action="#">
-                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input class="input" type="text" placeholder="Име" required>
-                            Презиме:<input class="input" type="text"  placeholder="Презиме" required></p>
+                        <p style="color: white; font-family: 'Ariel', cursive;">Име:<input id="ime6" class="input" type="text" placeholder="Име" required>
+                            Презиме:<input id="prezime6" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
-                            <textarea placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input class="kopce" type="submit" value="Испрати">
+                            <textarea id="vlezNaKom6" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
+                            <input style="width: 55px" onclick="Komentiraj(6)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
@@ -131,6 +131,6 @@
         <p style="position: relative; margin-left:1%; margin-top: 1%;font-size: 1.4em; font-family: 'Press Start 2P', cursive; color: #dbdbdb">Контакт mail: <a href="mailto:stefankrste@yahoo.com" style="color: #006486"> ЛИНК</a></p>
         <p>&nbsp</p>
     </footer>
-
+    <script  src="funkcii.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
         <h1>Блог:</h1>
         <form method="post" action="https://www.youtube.com">
             <p><label>
-                <input id="Naslov" style="margin-left: 0px;width: 250px ;"class="input" type="text" placeholder="Наслов">
+                <input id="naslov" style="margin-left: 0px;width: 250px ;"class="input" type="text" placeholder="Наслов">
             </label></p>
             <p><label>
                 <input id="tema" style="margin-left: 0px;width: 250px ;"class="input" type="text" placeholder="Тема">
@@ -41,10 +41,13 @@
                 <textarea id="txt" placeholder="Внесете текст" name="tema" rows="15" cols="200" required></textarea>
             </p>
             <p>
-                <input class="kopce" type="submit" value="Испрати">
+                <input style="width: 55px" onclick="dodadiblog()" class="kopce" value="Испрати">
                 <input class="kopce" type="reset" value="Избриши">
             </p>
         </form>
+        <div id="blogovi">
+
+        </div>
     </section>
     <footer id="kontakt" class="Kontakti">
         <hr>
@@ -55,6 +58,6 @@
         <p style="position: relative; margin-left:1%; margin-top: 1%;font-size: 1.4em; font-family: 'Press Start 2P', cursive; color: #dbdbdb">Контакт mail: <a href="mailto:stefankrste@yahoo.com" style="color: #006486"> ЛИНК</a></p>
         <p>&nbsp</p>
     </footer>
-
+    <script  src="funkcii.js"></script>
 </body>
 </html>

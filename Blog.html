@@ -8,6 +8,19 @@
     </title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script  src="funkcii.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onbeforeunload=function(){
+            localStorage.setItem("blog", $('#blogovi').html());
+        }
+
+        window.onload=function(){
+            var blog=localStorage.getItem("blog");
+
+            if(blog != null) $('#blogovi').html(blog);
+        }
+    </script>
 </head>
 <body>
     <section class="nav"id="home">
@@ -58,6 +71,5 @@
         <p style="position: relative; margin-left:1%; margin-top: 1%;font-size: 1.4em; font-family: 'Press Start 2P', cursive; color: #dbdbdb">Контакт mail: <a href="mailto:stefankrste@yahoo.com" style="color: #006486"> ЛИНК</a></p>
         <p>&nbsp</p>
     </footer>
-    <script  src="funkcii.js"></script>
 </body>
 </html>

@@ -8,6 +8,52 @@
     </title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script  src="funkcii.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.onbeforeunload=function(){
+            localStorage.setItem("br1", $('#like1').text());
+            localStorage.setItem("br2", $('#like2').text());
+            localStorage.setItem("br3", $('#like3').text());
+            localStorage.setItem("br4", $('#like4').text());
+            localStorage.setItem("br5", $('#like5').text());
+            localStorage.setItem("br6", $('#like6').text());
+            localStorage.setItem("komentar1", $('#labSlika1').text());
+            localStorage.setItem("komentar2", $('#labSlika2').text());
+            localStorage.setItem("komentar3", $('#labSlika3').text());
+            localStorage.setItem("komentar4", $('#labSlika4').text());
+            localStorage.setItem("komentar5", $('#labSlika5').text());
+            localStorage.setItem("komentar6", $('#labSlika6').text());
+        }
+
+        window.onload=function(){
+            var br1=localStorage.getItem("br1");
+            var br2=localStorage.getItem("br2");
+            var br3=localStorage.getItem("br3");
+            var br4=localStorage.getItem("br4");
+            var br5=localStorage.getItem("br5");
+            var br6=localStorage.getItem("br6");
+            var komentar1=localStorage.getItem("komentar1");
+            var komentar2=localStorage.getItem("komentar2");
+            var komentar3=localStorage.getItem("komentar3");
+            var komentar4=localStorage.getItem("komentar4");
+            var komentar5=localStorage.getItem("komentar5");
+            var komentar6=localStorage.getItem("komentar6");
+
+            if(br1 != null) $('#like1').text(br1);
+            if(br2 != null) $('#like2').text(br2);
+            if(br3 != null) $('#like3').text(br3);
+            if(br4 != null) $('#like4').text(br4);
+            if(br5 != null) $('#like5').text(br5);
+            if(br6 != null) $('#like6').text(br6);
+            if(komentar1 != null) $('#labSlika1').text(komentar1);
+            if(komentar2 != null) $('#labSlika2').text(komentar2);
+            if(komentar4 != null) $('#labSlika4').text(komentar4);
+            if(komentar5 != null) $('#labSlika5').text(komentar5);
+            if(komentar6 != null) $('#labSlika6').text(komentar6);
+            if(komentar3 != null) $('#labSlika3').text(komentar3);
+        }
+    </script>
 </head>
 <body>
     <section class="nav" id="home">
@@ -32,12 +78,12 @@
                             Презиме:<input id="prezime1" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
                             <textarea id="vlezNaKom1" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input style="width: 55px" onclick="Komentiraj(1)" class="kopce" value="Испрати">
+                            <input type="button" style="width: 70px" onclick="Komentiraj(1)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
                     <span style="color: white; font-family: 'Ariel', cursive;"><strong>Коментари:</strong></span>
-                    <p><textarea readonly id=labSkila1 class="Komentari"></textarea></p></td>
+                    <p><textarea readonly id=labSlika1 class="Komentari"></textarea></p></td>
 
                 <td style="width: 300px"></td>
 
@@ -48,12 +94,12 @@
                             Презиме:<input id="prezime2" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
                             <textarea id="vlezNaKom2" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input style="width: 55px" onclick="Komentiraj(2)" class="kopce" value="Испрати">
+                            <input type="button" style="width: 70px" onclick="Komentiraj(2)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
                     <span style="color: white; font-family: 'Ariel', cursive;"><strong>Коментари:</strong></span>
-                    <p><textarea readonly id=labSkila2 class="Komentari"></textarea></p></td>
+                    <p><textarea readonly id=labSlika2 class="Komentari"></textarea></p></td>
             </tr>
 
             <tr>
@@ -64,12 +110,12 @@
                             Презиме:<input id="prezime3" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
                             <textarea id="vlezNaKom3" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input style="width: 55px" onclick="Komentiraj(3)" class="kopce" value="Испрати">
+                            <input type="button" style="width: 70px" onclick="Komentiraj(3)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
                     <span style="color: white; font-family: 'Ariel', cursive;"><strong>Коментари:</strong></span>
-                    <p><textarea readonly id=labSkila3 class="Komentari"></textarea></p></td>
+                    <p><textarea readonly id=labSlika3 class="Komentari"></textarea></p></td>
 
                 <td style="width: 300px"></td>
 
@@ -80,12 +126,12 @@
                             Презиме:<input id="prezime4" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
                             <textarea id="vlezNaKom4" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input style="width: 55px" onclick="Komentiraj(4)" class="kopce" value="Испрати">
+                            <input type="button" style="width: 70px" onclick="Komentiraj(4)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
                     <span style="color: white; font-family: 'Ariel', cursive;"><strong>Коментари:</strong></span>
-                    <p><textarea readonly id=labSkila4 class="Komentari"></textarea></p></td>
+                    <p><textarea readonly id=labSlika4 class="Komentari"></textarea></p></td>
             </tr>
             <tr>
                 <td><img src="galerija/robot 5.png" height="400px" width="400px" alt="#"><br>
@@ -95,12 +141,12 @@
                             Презиме:<input id="prezime5" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
                             <textarea id="vlezNaKom5" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input style="width: 55px" onclick="Komentiraj(5)" class="kopce" value="Испрати">
+                            <input type="button" style="width: 70px" onclick="Komentiraj(5)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
                     <span style="color: white; font-family: 'Ariel', cursive;"><strong>Коментари:</strong></span>
-                    <p><textarea readonly id=labSkila5 class="Komentari"></textarea></p></td>
+                    <p><textarea readonly id=labSlika5 class="Komentari"></textarea></p></td>
 
                 <td style="width: 300px"></td>
 
@@ -111,12 +157,12 @@
                             Презиме:<input id="prezime6" class="input" type="text"  placeholder="Презиме" required></p>
                         <p>
                             <textarea id="vlezNaKom6" placeholder="Внесете го вашиот коментар за сликата " name="tema" rows="5" cols="65"></textarea><br>
-                            <input style="width: 55px" onclick="Komentiraj(6)" class="kopce" value="Испрати">
+                            <input type="button" style="width: 70px" onclick="Komentiraj(6)" class="kopce" value="Испрати">
                             <input class ="kopce" type="reset" value="Избриши">
                         </p>
                     </form>
                     <span style="color: white; font-family: 'Ariel', cursive;"><strong>Коментари:</strong></span>
-                    <p><textarea readonly id=labSkila6 class="Komentari"></textarea></p></td>
+                    <p><textarea readonly id=labSlika6 class="Komentari"></textarea></p></td>
             </tr>
         </table>
         </form>
@@ -131,6 +177,5 @@
         <p style="position: relative; margin-left:1%; margin-top: 1%;font-size: 1.4em; font-family: 'Press Start 2P', cursive; color: #dbdbdb">Контакт mail: <a href="mailto:stefankrste@yahoo.com" style="color: #006486"> ЛИНК</a></p>
         <p>&nbsp</p>
     </footer>
-    <script  src="funkcii.js"></script>
 </body>
 </html>

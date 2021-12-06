@@ -8,6 +8,61 @@
     </title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script  src="funkcii.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var vkupnoOcenki = 0;
+        var sumOcenki = 0;
+
+        function Ocenka(){
+            var ime=document.getElementById("imeAnketa").value;
+            var prezime=document.getElementById("prezimeAnketa").value;
+            var vozrast=document.getElementById("vozrastAnketa").value;
+            var tekst=document.getElementById("KomVlezAnketa").value;
+
+            var dosegasniKom=document.getElementById("KomIzlezAnketa").value;
+
+            if(ime!=="" && prezime!=="" && vozrast!=="") {
+                if(dosegasniKom!=="") {
+                    document.getElementById("KomIzlezAnketa").innerHTML = dosegasniKom + ("\n" + ime + " " + prezime + " (" + vozrast + ") : " + tekst);
+                }else{
+                    document.getElementById("KomIzlezAnketa").innerHTML = (ime + " " + prezime + " (" + vozrast + ") : " + tekst);
+                }
+                document.getElementById("imeAnketa").value="";
+                document.getElementById("prezimeAnketa").value="";
+                document.getElementById("vozrastAnketa").value="";
+                document.getElementById("KomVlezAnketa").value="";
+
+                vkupnoOcenki++;
+                var ocena = document.getElementById("ocenaAnketa").value;
+                sumOcenki = (Number(sumOcenki) + Number(ocena));
+                document.getElementById("srednaVrsdonst").innerHTML = (sumOcenki / vkupnoOcenki).toFixed(2);
+                document.getElementById("ocenaAnketa").value = 5;
+            }
+        }
+
+        window.onbeforeunload=function(){
+            localStorage.setItem("KomAnketa", $('#KomIzlezAnketa').text());
+            localStorage.setItem("VkupnoOcenki", vkupnoOcenki);
+            localStorage.setItem("SumaOcenki", sumOcenki);
+        }
+
+        window.onload=function(){
+            var KomAnketa=localStorage.getItem("KomAnketa");
+            var VkupnoOcenki=localStorage.getItem("VkupnoOcenki");
+            var SumaOcenki=localStorage.getItem("SumaOcenki");
+
+            if(KomAnketa != null) $('#KomIzlezAnketa').text(KomAnketa);
+            if(VkupnoOcenki != null) vkupnoOcenki=VkupnoOcenki;
+            if(SumaOcenki != null) sumOcenki=SumaOcenki;
+
+            if(sumOcenki!=="0") {
+                document.getElementById("srednaVrsdonst").innerHTML = (sumOcenki / vkupnoOcenki).toFixed(2);
+            }else{
+                document.getElementById("srednaVrsdonst").innerHTML = 0;
+            }
+        }
+    </script>
 </head>
 <body>
     <section class="nav"id="home">
@@ -22,26 +77,36 @@
     </section>
 
     <section id="anketa">
-        <form method= "post" action="#">
-            <h1>Анкета за посетители:</h1>
-            <p style="font-weight: bold;">Внесете ваши лични податоци:</p>
-            <p>Име:<input class="input" type="text" placeholder="Име">
-            Презиме:<input class="input" type="text"  placeholder="Презиме"></p>
-            <p>Возраст:<input class="input" type="text"  placeholder="Возраст" style="width: 50px;">
-                Пол:<select name="пол" id="pol">
-                <option value="masko">Машко</option>
-                <option value="zensko">Женско</option>
-                </select>
-            </p>
-            <p><label>Оценка за страната:
-                1<input type="range" min="0" max="10" value="5">10
-            </label></p>
-            <p>
-                <textarea placeholder="Внесете го вашиот коментар за страната " name="tema" rows="5" cols="100"></textarea><br>
-                <input class="kopce" type="submit" value="Испрати">
-                <input class ="kopce" type="reset" value="Избриши">
-            </p>
-        </form>
+        <table>
+        <tr>
+            <td>
+                <form>
+                    <h1>Анкета за посетители:</h1>
+                    <p style="font-weight: bold;">Внесете ваши лични податоци:</p>
+                    <p>Име:<input id="imeAnketa" class="input" type="text" placeholder="Име">
+                    Презиме:<input id="prezimeAnketa" class="input" type="text"  placeholder="Презиме"></p>
+                    <p>Возраст:<input id="vozrastAnketa" class="input" type="number"  placeholder="Возраст" style="width: 50px;">
+                        Пол:<select name="пол" id="pol">
+                        <option value="masko">Машко</option>
+                        <option value="zensko">Женско</option>
+                        </select>
+                    </p>
+                    <p><label>Оценка за страната:
+                        1<input id="ocenaAnketa" type="range" min="0" max="10" value="5">10
+                    </label></p>
+                    <p>
+                        <textarea id="KomVlezAnketa" placeholder="Внесете го вашиот коментар за страната " name="tema" rows="5" cols="100"></textarea><br>
+                        <input type="button" style="width: 70px" onclick="Ocenka();" class="kopce" value="Испрати">
+                        <input class ="kopce" type="reset" value="Избриши">
+                    </p>
+                </form>
+            </td>
+        <td>
+            <p style="margin-left: 20em; font-size: x-large">Просечна оценка: <span id="srednaVrsdonst">0</span></p>
+            <textarea id="KomIzlezAnketa" readonly style="margin-left: 20em"></textarea>
+        </td>
+        </tr>
+        </table>
     </section>
     <footer id="kontakt" class="Kontakti">
         <hr>

@@ -124,7 +124,7 @@ h1{
 
 .Komentari{
     color: white;
-    background-color: #1b002f;
+    background-color: #471a6f;
     font-family: 'Ariel', cursive;
     margin-left: 4%;
     width: 450px;
@@ -135,4 +135,12 @@ h1{
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
+}
+
+#KomIzlezAnketa{
+    color: white;
+    background-color: #000000;
+    font-family: 'Ariel', cursive;
+    width: 700px;
+    height: 300px;
 }

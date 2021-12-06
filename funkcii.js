@@ -8,19 +8,18 @@ function Komentiraj(br){
     var ime=document.getElementById("ime"+br).value;
     var prezime=document.getElementById("prezime"+br).value;
     var tekst=document.getElementById("vlezNaKom"+br).value;
-    var dosegasniKom=document.getElementById("labSkila" + br).value;
+    var dosegasniKom=document.getElementById("labSlika" + br).value;
 
     if(ime!=="" && prezime!=="") {
         if(dosegasniKom!=="") {
-            document.getElementById("labSkila" + br).innerHTML = dosegasniKom + ("\n" + ime + " " + prezime + ": " + tekst);
+            document.getElementById("labSlika" + br).innerHTML = dosegasniKom + ("\n" + ime + " " + prezime + ": " + tekst);
         }else{
-            document.getElementById("labSkila" + br).innerHTML = (ime + " " + prezime + ": " + tekst);
+            document.getElementById("labSlika" + br).innerHTML = (ime + " " + prezime + ": " + tekst);
         }
+        document.getElementById("ime"+br).value="";
+        document.getElementById("prezime"+br).value="";
+        document.getElementById("vlezNaKom"+br).value="";
     }
-
-    document.getElementById("ime"+br).value="";
-    document.getElementById("prezime"+br).value="";
-    document.getElementById("vlezNaKom"+br).value="";
 }
 
 function dodadiblog(){
